@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#100d09" />
+  <meta name="description" content="An old diary. A little ink. Someone is waiting on the other side of the page. An interactive, unofficial Tom Riddle diary experience." />
+  <title>The Diary · T. M. Riddle</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <main id="experience" aria-label="Tom Riddle's enchanted diary">
+    <div id="world" aria-hidden="true"></div>
+    <div id="object-controls" aria-label="Objects on the desk">
+      <button id="book-object" class="object-control" aria-label="Open the diary" aria-pressed="false" hidden></button>
+      <button id="lamp-object" class="object-control" aria-label="Switch lamp off" aria-pressed="true" hidden></button>
+      <button id="quill-object" class="object-control" aria-label="Pick up the quill" aria-pressed="false" hidden></button>
+    </div>
+    <div class="vignette" aria-hidden="true"></div>
+    <header class="masthead">
+      <div><span class="eyebrow">A MEMORY, PRESERVED</span><h1>The Diary</h1></div>
+      <button id="about" class="quiet" aria-haspopup="dialog" aria-label="About this diary">?</button>
+    </header>
+    <div id="loading" role="status"><span class="loading-mark">R</span><p>Some things are better left unopened.</p><span class="loading-line"></span></div>
+    <section id="invitation" hidden aria-label="Open the diary">
+      <p class="eyebrow">PROPERTY OF T. M. RIDDLE</p>
+      <p class="invitation-copy">It appears to be quite blank.</p>
+      <button id="open" class="text-button">Open the diary <span aria-hidden="true">↗</span></button>
+    </section>
+    <div id="writing-ui" hidden>
+      <p id="status" role="status" aria-live="polite">The page is listening.</p>
+      <form id="writing-form" autocomplete="off">
+        <label for="inscription" class="sr-only">Write in the diary</label>
+        <textarea id="inscription" rows="1" maxlength="320" spellcheck="false" placeholder="Write something…" aria-describedby="writing-help" enterkeyhint="send"></textarea>
+        <button id="send" type="submit" aria-label="Let the ink sink into the diary" title="Send · Enter"><span aria-hidden="true">↵</span></button>
+      </form>
+      <p id="writing-help">Pick up the quill, or start typing. Write, then pause.</p>
+      <div class="bottom-actions"><button id="restart" class="quiet">Begin again</button><span class="small-rule"></span><button id="sound" class="quiet" aria-pressed="false">Sound off</button><span class="small-rule"></span><button id="replay" class="quiet" disabled>Read last reply</button></div>
+    </div>
+    <p class="edition">T. M. R. <span>·</span> 1943</p>
+    <div class="sr-only" id="spoken-reply" aria-live="polite"></div>
+  </main>
+  <dialog id="about-dialog">
+    <button class="close quiet" id="close-about" aria-label="Close about">×</button>
+    <p class="eyebrow">A NOTE TO THE READER</p><h2>Ink remembers.</h2>
+    <p>Write anything. Your words will soak into the page; someone on the other side will answer.</p>
+    <p>Touch the lamp to switch it on or off. Pick up the quill beside the book to write, or simply start typing. Touch the diary to close it and return to the desk; your conversation is kept until you begin again.</p>
+    <p>Pause for a few seconds, or press Enter, to let your ink settle. The reply will fade when you start writing back, or after you have had time to read. You can read the last reply again.</p>
+    <p class="fine">An unofficial fan-made experience inspired by the Harry Potter books. Not affiliated with or endorsed by their creators or rights holders. Replies are AI-generated fiction, not professional advice.</p>
+    <p class="fine">Your writing is sent to an AI service to generate replies. Conversation history stays in this tab's memory and is cleared when you reload or begin again. Please do not share sensitive information.</p>
+    <p class="fine">3D oil lamp and wood/stone textures: Poly Haven, CC0. Handwriting: Pinyon Script and Cedarville Cursive. Display type: IM FELL English.</p>
+  </dialog>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

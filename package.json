@@ -1,0 +1,22 @@
+{
+  "name": "riddle-diary",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An enchanted, candlelit diary experience",
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "test": "node --test test/*.test.mjs",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@fontsource/cedarville-cursive": "5.3.0",
+    "@fontsource/homemade-apple": "5.3.0",
+    "@fontsource/im-fell-english": "5.3.0",
+    "@fontsource/pinyon-script": "5.3.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": { "vite": "8.3.4" }
+}
